@@ -1,6 +1,6 @@
 # Personal-Webpage
 
-Responsive Portfolio Webpage [PT HDI](http://codepen.io/krisrp/full/ZWLzdX/).
+Responsive Portfolio Webpage [demo](http://codepen.io/krisrp/full/ZWLzdX/).
 
 This is a responsive portfolio webpage created using Jade, Sass, and jQuery. In order to get html and css file running in your local environment, you must install Jade and Sass first.
 
