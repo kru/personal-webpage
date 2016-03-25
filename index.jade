@@ -1,0 +1,100 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="description", content="Kristoforus Portofolio Webpage")
+		meta(name="viewport", content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0")
+		link(href="css/bootstrap.min.css", rel="stylesheet")
+		link(href="css/style.css", rel="stylesheet")
+		title Kris Personal Webpage
+	body
+		.container-fluid
+			nav
+				.nav.navbar-nav.navbar-fixed-top
+					ul.nav-left
+						li 
+							a.navbar-link.hidden-xs.hidden-sm(href= 'index.html') Kristo
+					.dropdown
+						span.icon-menu.glyphicon.glyphicon-menu-hamburger.visible-xs-block.visible-sm-block
+						ul.nav-dropdown
+							- var list = ["Home", "About", "Portfolio", "Contact"]
+							each val in list
+								li.dropdown-style
+									a(href= '#'+val)= val
+
+					ul.nav-right
+						- var list = ["Home", "About", "Portfolio", "Contact"]
+						each val in list
+							li.nav-style.hidden-xs.hidden-sm
+								a(href= '#'+val)= val
+							
+
+		section#Home.home
+			.container-fluid.text-center
+				h2 Flavio Creative 
+				cite 
+					p Combinations of a passion and web technologies
+					
+					
+		section#About.about
+			.container-fluid
+				.col-xs-12				
+					#profile-photo.col-xs-6.profile-photo
+						img.img-responsive.center-block(src="images/mean-mini.jpg", alt="Photo Profile")
+						.img-caption.center-block
+							h4.caption-title.text-center MongoDB Express Angular Node
+					
+					article.col-xs-6.info-author
+						h1 Hello ...
+						p.lead I am a passionate web developer based in Indonesia. My experience is range from building a company profile website to scalable web applications and I love to build something simple and elegance for end-user with microinteractions.      
+				
+				.col-xs-12
+					article.col-xs-6.text-tools.skills-author
+						p.lead I have been learning several technologies such as HTML, CSS, Javascript (Mongodb, Express, Angular, Node), and Python. In order to develop web applications I am use these toolkits :
+
+					.col-xs-6.logo-tools.clearfix
+						.dev-tools.center-block
+							img#sublime(src="images/sublime-logo-mini.png", alt="sublime-logo")
+							img#jade(src="images/jade-mini.png", alt="jade-logo")
+							img#sass(src="images/sass-mini.png", alt="sass-logo")
+				
+
+		section#Portfolio.portfolio
+			.container-fluid
+				- var port1 = { "A Tribute Page" : "images/tribute.png", "HDI Profile Company" : "images/hdi.png", "Twitch API" : "images/project-ongoing.png", "Pomodoro Clock" : "images/project-ongoing.png", "Tic Tac Toe" : "images/project-ongoing.png", "Simon Game" : "images/project-ongoing.png", "JS Calculator" : "images/project-ongoing.png", "Recipe Box" : "images/project-ongoing.png"}
+				div.col-xs-12.clearfix
+					ul.list
+						each val, index in port1
+							li
+								.img-container
+									a(href='')
+										img.img-responsive(src= val, alt= index + '-img')
+										.img-caption-style
+											h4.img-text.text-center= index
+					
+
+		section#Contact.contact
+			.container-fluid
+				article.text-center.lead
+					h2 Feel free to reach me 
+					h2 if you have something to discuss or 
+					h2 just wanna say hi
+					//p <i> kristoforusrp [at] gmail.com </i>
+				
+				section
+					.soc-med.col-xs-12
+						ul.soc-med-style
+							-var socList = {"twitterIcon": "https://www.twitter.com/kr_pamungkas", "facebookIcon": "https://www.facebook.com/kristoforusruap", "linkedInIcon": "https://id.linkedin.com/in/krisrp", "githubIcon": "https://github.com/krua"}
+							each val, index in socList
+								li
+									a(href= val, target= "_blank", class= index)
+						
+					
+		section
+			footer.footer.container-fluid.text-center
+				p Flavio Creative &copy 2016									
+
+	script(src="js/jquery-2.2.1.min.js")
+	script(src="js/main.js")
+	
+	
