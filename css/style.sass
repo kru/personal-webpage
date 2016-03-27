@@ -7,7 +7,7 @@ $box-shadow-img: 0 10px 15px rgba(0, 0, 0, .6)
 $iconSize: 60px
 $iconSpacing: 19px
 $iconRowHeight: -70px
-$img-caption: rgba(0, 0, 0, .7) 
+$img-caption: rgba(0, 0, 0, .7)
 $white-color: rgb(238, 238, 238)
 $iconClass: twitterIcon, facebookIcon, linkedInIcon, githubIcon
 
@@ -21,7 +21,7 @@ $iconClass: twitterIcon, facebookIcon, linkedInIcon, githubIcon
 	background-image: url($sprite1x)
 	@media	(min--moz-device-pixel-ratio: 1.3),	(-o-min-device-pixel-ratio: 2.6/2), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx)
 		background-image: $sprite2x
-			
+
 	display: block
 
 =transform($transform)
@@ -46,16 +46,16 @@ $iconClass: twitterIcon, facebookIcon, linkedInIcon, githubIcon
 	-webkit-transition-delay: $time
 	-moz-transition-delay: $time
 	-ms-transition-delay: $time
-	transition-delay: $time	
+	transition-delay: $time
 
-body 
+body
 	font-family: $font-stack
 	font-size: $size
 
 ul
-	-webkit-padding-start: 0px
-	-moz-padding-start: 0px
-	padding-start: 0px
+	-webkit-padding-start: 0
+	-moz-padding-start: 0
+	padding-start: 0
 	list-style: none
 
 .clear
@@ -68,7 +68,7 @@ ul
 	text-decoration: none
 	display: block
 
-//Make all sections have exact size 
+//Make all sections have exact size
 .section
 	height: auto
 	padding: 10em 0
@@ -76,7 +76,7 @@ ul
 .container-fluid
 	padding-right: 0
 	padding-left: 0
-	
+
 //Reset margin row and container bootstrap
 .row,
 .container
@@ -90,8 +90,8 @@ ul
 	height: 60px
 	margin-top: 0
 	display: none
-	
-.nav ul li 
+
+.nav ul li
 	float: left
 	overflow: hidden
 	display: block
@@ -109,7 +109,7 @@ ul
 
 .nav-right
 	float: right
-	margin-right: 4em	
+	margin-right: 4em
 
 .navbar-nav>ul>li>a:hover
 	color: rgb(255, 179, 64)
@@ -126,7 +126,7 @@ ul
 	border-radius: 0
 	display: block
 	cursor: pointer
-	
+
 .navbar-nav>ul>li>a:focus,
 .navbar-nav>li>a:active,
 	color: $white-color
@@ -158,7 +158,7 @@ ul
 	border-radius: 0 3em
 
 
-ul.nav-dropdown li 
+ul.nav-dropdown li
 	float: none
 	text-align: center
 	padding: 5px 0
@@ -172,10 +172,9 @@ ul.nav-dropdown>li>a:focus,
 ul.nav-dropdown>li>a:active
 	color: $white-color
 	background-color: rgb(26, 36, 47)
-	
+
 
 //Home Section
-#home,
 .home
 	@extend .section
 	padding: 16em 0
@@ -194,7 +193,6 @@ ul.nav-dropdown>li>a:active
 	border-bottom: 1px solid $white-color
 
 //About Section
-#about,
 .about
 	padding: 6em 0
 	background-color: $bg-color
@@ -204,7 +202,7 @@ ul.nav-dropdown>li>a:active
 .animate
 	position: relative
 	left: 0
-	
+
 .profile-photo
 	position: relative
 	overflow: hidden
@@ -234,7 +232,7 @@ ul.nav-dropdown>li>a:active
 	margin-bottom: 8px
 
 	+transition(all, .4s, ease-in)
-	
+
 	+transition-delay(.4s)
 
 .img-caption h4
@@ -244,7 +242,7 @@ ul.nav-dropdown>li>a:active
 
 	+transition(all, .4s, ease-in)
 
-.profile-photo img:hover, 
+.profile-photo img:hover,
 .img-caption:hover h4
 	right: 0
 
@@ -264,7 +262,7 @@ ul.nav-dropdown>li>a:active
 .text-tools
 	padding-top: 3em
 
-.logo-tools 
+.logo-tools
 	position: relative
 	overflow: hidden
 	float: left
@@ -280,13 +278,12 @@ ul.nav-dropdown>li>a:active
 	+rotate(180deg)
 
 #sublime,
-#jade, 
+#jade,
 #sass
 	border-radius: 50%
 
 
 //Section Portfolio
-#portfolio,
 .portfolio
 	@extend .section
 	padding: 6em 0
@@ -326,14 +323,13 @@ li .img-container img
 li .img-container:hover
 	display: block
 	background-color: rgba(1, 152, 117, .4)
-	
+
 	+transition(all, .1s, ease-in-out)
 
 .img-container:hover img
 	+scale(.9, .9)
 	+transition(all, .2s, ease-in)
 
-#contact,
 .contact
 	@extend .section
 	background-color: $bg-color
@@ -357,17 +353,17 @@ li .img-container:hover
 ul.soc-med-style li a
 	width: $iconSize+3
 	height: $iconSize+3
-	+sprite 
+	+sprite
 
-	@for $i from 1 through length($iconClass) 
+	@for $i from 1 through length($iconClass)
 		&.#{nth($iconClass, $i)}
 			$i: $i - 1
 			background-position: -iconPositioning($i,0)
 	//Hover
-	@for $i from 1 through length($iconClass) 
-		&.#{nth($iconClass, $i)}:hover 
+	@for $i from 1 through length($iconClass)
+		&.#{nth($iconClass, $i)}:hover
 			$i: $i - 1
-			background-position: -iconPositioning($i,1) 
+			background-position: -iconPositioning($i,1)
 
 .footer
 	margin-bottom: 0
@@ -385,13 +381,12 @@ ul.soc-med-style li a
 		height: 0
 	.home h2
 		font-size: 4em
-		margin: -2em 0em 0em 
+		margin: -2em 0 0
 	.home p
 		font-size: 1.5em
 		margin: 0
 		padding: 1em 1em
 		border-bottom: none
-	#about,
 	.about
 		padding: 2em 0 4em
 	.profile-photo
@@ -408,7 +403,7 @@ ul.soc-med-style li a
 	.dev-tools img
 		padding: 0 6px
 		width: 30%
-	
+
 	#portfolio,
 	.portfolio
 		padding: 3em 0
@@ -417,14 +412,13 @@ ul.soc-med-style li a
 
 @media only screen and (min-width: 480px) and (max-width : 767px)
 	.nav
-		height: 0	
+		height: 0
 	.home h2
-		margin: -1em 0em .5em 
+		margin: -1em 0 .5em
 	.home p
 		margin: 0
 		padding: 0 1em
 		border-bottom: none
-	#about,
 	.about
 		padding: 2em 0 4em
 	.profile-photo
@@ -436,7 +430,7 @@ ul.soc-med-style li a
 	.about article
 		width: 100%
 	.skills-author
-		padding-top: 0em
+		padding-top: 0
 	.logo-tools
 		width: 100%
 		margin: 0 -1em
@@ -452,12 +446,11 @@ ul.soc-med-style li a
 	.nav
 		height: 0
 	.home h2
-		margin: -1em 0em .5em
+		margin: -1em 0 .5em
 	.home p
 		font-size: 1.5em
 		margin: 0 3em
 		padding-bottom: 2em
-	#about,
 	.about
 		padding: 2em 0 5em
 	.profile-photo
@@ -468,7 +461,7 @@ ul.soc-med-style li a
 	.about article
 		width: 100%
 	.skills-author
-		padding-top: 0		
+		padding-top: 0
 	.logo-tools
 		width: 100%
 		margin: 0 -1em

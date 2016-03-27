@@ -3,9 +3,9 @@ body {
   font-size: 16px; }
 
 ul {
-  -webkit-padding-start: 0px;
-  -moz-padding-start: 0px;
-  padding-start: 0px;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  padding-start: 0;
   list-style: none; }
 
 .clear {
@@ -18,10 +18,7 @@ ul {
   text-decoration: none;
   display: block; }
 
-.section, #home,
-.home, #portfolio,
-.portfolio, #contact,
-.contact {
+.section, .home, .portfolio, .contact {
   height: auto;
   padding: 10em 0; }
 
@@ -122,7 +119,6 @@ ul.nav-dropdown > li > a:active {
   color: #eeeeee;
   background-color: #1a242f; }
 
-#home,
 .home {
   padding: 16em 0;
   color: #eeeeee;
@@ -139,7 +135,6 @@ ul.nav-dropdown > li > a:active {
   padding-bottom: 1em;
   border-bottom: 1px solid #eeeeee; }
 
-#about,
 .about {
   padding: 6em 0;
   background-color: rgba(0, 0, 255, 0.3);
@@ -237,7 +232,6 @@ ul.nav-dropdown > li > a:active {
 #sass {
   border-radius: 50%; }
 
-#portfolio,
 .portfolio {
   padding: 6em 0;
   background: url("../images/bg-port.jpg") 100% 0 fixed;
@@ -296,7 +290,6 @@ li .img-container:hover {
   -ms-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
 
-#contact,
 .contact {
   background-color: rgba(0, 0, 255, 0.3);
   position: relative;
@@ -358,7 +351,7 @@ ul.soc-med-style li a {
 
   .home h2 {
     font-size: 4em;
-    margin: -2em 0em 0em; }
+    margin: -2em 0 0; }
 
   .home p {
     font-size: 1.5em;
@@ -366,7 +359,6 @@ ul.soc-med-style li a {
     padding: 1em 1em;
     border-bottom: none; }
 
-  #about,
   .about {
     padding: 2em 0 4em; }
 
@@ -401,14 +393,13 @@ ul.soc-med-style li a {
     height: 0; }
 
   .home h2 {
-    margin: -1em 0em 0.5em; }
+    margin: -1em 0 0.5em; }
 
   .home p {
     margin: 0;
     padding: 0 1em;
     border-bottom: none; }
 
-  #about,
   .about {
     padding: 2em 0 4em; }
 
@@ -425,7 +416,7 @@ ul.soc-med-style li a {
     width: 100%; }
 
   .skills-author {
-    padding-top: 0em; }
+    padding-top: 0; }
 
   .logo-tools {
     width: 100%;
@@ -445,14 +436,13 @@ ul.soc-med-style li a {
     height: 0; }
 
   .home h2 {
-    margin: -1em 0em 0.5em; }
+    margin: -1em 0 0.5em; }
 
   .home p {
     font-size: 1.5em;
     margin: 0 3em;
     padding-bottom: 2em; }
 
-  #about,
   .about {
     padding: 2em 0 5em; }
 
