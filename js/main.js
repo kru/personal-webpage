@@ -4,7 +4,7 @@ $(document).ready(function () {
 	function checkWidth() {
 		if (window.matchMedia('(max-width: 1224px) and (min-width: 961px)').matches) {
 			$('.list li:eq(4)').removeClass('clear');
-			$('.list li:eq(3)').addClass('clear');	
+			$('.list li:eq(3)').addClass('clear');
 		}
 		else {
 			$('.list li:eq(4)').addClass('clear');
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 	// 1. Detect current active id
 	// 2. Move to down or top section depend on up, down, pgUp, PgDown
-	// 3. 
+	// 3.
 
 	$('.nav-right a').on('keypress', function(val) {
 		if (val.keyCode === 40 || val.keyCode === 38) {
@@ -32,12 +32,12 @@ $(document).ready(function () {
 	$('.nav-right a, .dropdown-style a').on('click', function (e) {
         e.preventDefault();
         //$(document).off("scroll");
-        
+
         $('.nav-right a, .dropdown-style a').each(function () {
             $(this).removeClass('active');
-        })
+        });
         $(this).addClass('active');
-      
+
         var target = this.hash,
             menu = target;
 
@@ -48,18 +48,18 @@ $(document).ready(function () {
         }, 1100, 'swing', function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
-        })
-    })
+        });
+    });
 
 
 	function onScroll(event) {
 		var scrollPos = $(document).scrollTop();
 		$('.nav-right a').each(function() {
-			
+
 			var currLink = $(this),
 				refElement = $(currLink.attr('href'));
 
-			if (refElement.position().top-50 <= scrollPos && refElement.position().top + 
+			if (refElement.position().top-50 <= scrollPos && refElement.position().top +
 				refElement.height() > scrollPos-100) {
 
             	$('.nav-right a').removeClass("active");
@@ -68,7 +68,7 @@ $(document).ready(function () {
         	else {
             	currLink.removeClass("active");
         	}
-    	})
+    	});
 	}
 
 	// Hamburger menu trigger
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
 // Images animation
 function imageAnimation() {
-		
+
 		var scroll_top = $(window).scrollTop(),
 			position = $('#About').position().top,
 			windowPos = Math.floor(position),
@@ -119,4 +119,3 @@ function imageAnimation() {
 	}
 
 $(window).scroll(imageAnimation);
-
